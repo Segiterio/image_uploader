@@ -23,13 +23,8 @@ const Preview = ({ imageUrl }) => {
 
       <div className="flex text-[10px] gap-3 rounded-lg bg-[#F6F8FB] border border-[#E0E0E0] p-px items-center max-w-[338px]">
         <p className="flex-grow px-1 text-[#4F4F4F] truncate">{imageUrl}</p>
-        <div className="relative border">
-          <div
-            className=" absolute w-fit bg-green-600 border h-full px-3 py-1.5 rounded-full text-white left-1/2 -top-1 -translate-x-1/2 -translate-y-full opacity-0 "
-            ref={aniRef}
-          >
-            Copied
-          </div>
+        <div className="relative ">
+          
           <button
             className="w-fit bg-blue-500 border h-full px-3 py-1.5 rounded-lg border-none text-white cursor-pointer whitespace-nowrap relative"
             onClick={async () => {
@@ -46,6 +41,12 @@ const Preview = ({ imageUrl }) => {
           >
             Copy Link
           </button>
+          <div
+            className=" absolute w-fit bg-green-600 border h-full px-3 py-1.5 rounded-full text-white left-1/2 -top-1 -translate-x-1/2 -translate-y-full opacity-0 "
+            ref={aniRef}
+          >
+            Copied
+          </div>
         </div>
       </div>
     </div>
